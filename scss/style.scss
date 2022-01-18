@@ -1,191 +1,221 @@
 @font-face {
-	font-family: "TTLakes";
-	src: url('../fonts/TTLakes-Regular.woff') format('woff');
-		font-weight: 400;
-		font-style: normal;
-}
-
-
-@font-face {
-	font-family: "TTLakes";
-	src: url('../fonts/TTLakes-Medium.woff') format('woff');
-		font-weight: 500;	
-		font-style: normal;
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
 }
 
 @font-face {
-	font-family: "TTLakes";
-	src: url('../fonts/TTLakes-Bold.woff') format('woff');
-		font-weight: 700;
-		font-style: normal;
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Medium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
 }
 
-*{
-	padding: 0;
-	margin: 0;
-	border: 0;
+@font-face {
+  font-family: "TTLakes";
+  src: url("../fonts/TTLakes-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
 }
-*,*:before,*:after{
-	-moz-box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	box-sizing: border-box;
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
 }
-:focus,:active{outline: none;}
-a:focus,a:active{outline: none;}
-button{cursor: pointer;}
-button::-moz-focus-inner {padding:0;border:0;}
-a, a:visited{text-decoration: none;}
-a:hover{text-decoration: none;}
-ul,li{list-style: none;}
-nav,footer,header,aside{display: block;}
-input,button,textarea{font-family:inherit;}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul,
+li {
+  list-style: none;
+}
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
 
-button{
-	background-color:transparent;
-	border: none;
- }
+button {
+  background-color: transparent;
+  border: none;
+}
 
-$menu-main-text-color:#1B1C21;
-$menu-active-text-color:#7E7E82;
+$menu-main-text-color: #1b1c21;
+$menu-active-text-color: #7e7e82;
 
- .menu-wrapper {
-	 width: 320px;
-	 height: 1024px;
-	 position: absolute;
-	 top: 0px;
-	 left: 0px;
-	 font-family:"TTLakes", sans-serif;
-	 font-weight: 500;
+html,
+body {
+  height: 100%;
+}
+
+.menu-wrapper {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  font-family: "TTLakes", sans-serif;
+  font-weight: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .menu-header {
-	height: 116px;
+  height: 116px;
 
-		&__close-menu {
-			position: absolute;
-			left: 24px;
-			top: 23px;
-		}
+  &__close-menu {
+    position: absolute;
+    left: 24px;
+    top: 23px;
+  }
 
-		&__logo {
-			position: absolute;
-			left: 80px;
-			top: 19px;
-		}
+  &__logo {
+    position: absolute;
+    left: 80px;
+    top: 19px;
+  }
 
-		&__menu-search {
-			position: absolute;
-			top: 23px;
-			right:24px;
-		}
+  &__menu-search {
+    position: absolute;
+    top: 23px;
+    right: 24px;
+  }
 }
 
 .menu-navigation-element {
-	padding-left: 24px;
-	padding-bottom: 32px;
-	line-height: 24px;
-	letter-spacing: -0.2px;
+  margin-left: 24px;
+  margin-bottom: 32px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
 }
 
 .menu-navigation {
-	height: 668px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+  &__element1 {
+    margin-left: 20px;
+    margin-top: 4px;
+  }
 
-	&__element1{
-		padding-left:20px;
-		padding-top: 4px;
-	}
-
-	&__element1::before {
-		content:"";
-		border-left:4px solid #41F6D7;
-		width: 4px;
-		height: 32px;
-		display: inline-block;
-		border-radius: 0 100px 100px 0;
-		position: absolute;
-		top:116px;
-		left:0px;
-	}
-	
+  &__element1::before {
+    content: "";
+    border-left: 4px solid #41f6d7;
+    width: 4px;
+    height: 32px;
+    display: inline-block;
+    border-radius: 0 100px 100px 0;
+    position: absolute;
+    top: 116px;
+    left: 0px;
+  }
 }
 .menu-navigation-element > a {
-	color:$menu-main-text-color;
+  color: $menu-main-text-color;
 }
 
 .menu-navigation-element:first-child > a {
-	color:$menu-active-text-color;
+  color: $menu-active-text-color;
 }
 
 .menu-footer {
+  display: flex;
+  flex-direction: column;
+  margin-left: 24px;
+  justify-items: flex-end;
+  &__email {
+    margin-top: 16px;
+    color: $menu-main-text-color;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+  }
 
-		&__email {
-			position: absolute;
-			left:24px;
-			bottom: 140px;
-			color: $menu-main-text-color;
-			font-size: 16px;
-			line-height: 24px;
-			letter-spacing: -0.2px;
-		}
-
-		&__phone-number {
-			position: absolute;
-			left:24px;
-			bottom: 96px;
-			color: $menu-main-text-color;
-			font-size: 24px;
-			line-height: 32px;
-			letter-spacing: -0.6px;
-			font-weight: 700;
-			width: 196px;
-			height: 32px;
-		}
+  &__phone-number {
+    margin-top: 12px;
+    margin-bottom: 40px;
+    color: $menu-main-text-color;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    font-weight: 700;
+    width: 196px;
+    height: 32px;
+  }
 }
 .menu-contacts-buttons {
+  &__phone-call {
+    margin-right: 16px;
+  }
 
-		&__phone-call {
-			position: absolute;
-			left:24px;
-			bottom: 180px;
-		}
+  &__chat {
+    margin-right: 16px;
+  }
 
-		&__chat {
-			position: absolute;
-			left:80px;
-			bottom: 180px;
-		}
-
-		&__profile {
-			position: absolute;
-			left:136px;
-			bottom: 180px;
-		}
+  &__profile {
+    margin-right: 16px;
+  }
 }
 .menu-language-switch-buttons {
-	
+  &__ru {
+    color: $menu-active-text-color;
+    margin-right: 7px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+  }
 
-		&__ru {
-			position: absolute;
-			left:24px;
-			bottom: 32px;
-			color:$menu-active-text-color;
-		}
+  &__en {
+    margin-right: 7px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+  }
 
-		&__en {
-			position: absolute;
-			left:56px;
-			bottom: 32px;
-		}
-
-		&__ch {
-			position: absolute;
-			left:87px;
-			bottom: 32px;
-		}
+  &__ch {
+    margin-right: 7px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    font-size: 16px;
+  }
 }
 
-button:hover{
-	filter: drop-shadow(1px 1px 3px #FF3E79);
-	transform: scale(1.05);
-	transition-duration:0.5s;
+button:hover {
+  filter: drop-shadow(1px 1px 3px #000);
+  transform: scale(1.05);
+  transition-duration: 0.2s;
 }
