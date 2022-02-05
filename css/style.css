@@ -32,16 +32,6 @@
   box-sizing: border-box;
 }
 
-:focus,
-:active {
-  outline: none;
-}
-
-a:focus,
-a:active {
-  outline: none;
-}
-
 button {
   cursor: pointer;
 }
@@ -89,6 +79,8 @@ body {
 }
 
 .menu-wrapper {
+  -webkit-box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+          box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
   width: 320px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -132,6 +124,9 @@ body {
   margin-bottom: 32px;
   line-height: 24px;
   letter-spacing: -0.2px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .menu-navigation {
@@ -172,6 +167,10 @@ body {
   color: #7e7e82;
 }
 
+.menu-navigation-element:first-child:hover > a {
+  color: #1b1c21;
+}
+
 .menu-footer {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -190,6 +189,9 @@ body {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .menu-footer__phone-number {
@@ -216,26 +218,15 @@ body {
   margin-right: 16px;
 }
 
-.menu-language-switch-buttons__ru {
+.menu-language-switch-buttons {
+  margin-right: 7px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+}
+
+.menu-language-switch-buttons:first-child {
   color: #7e7e82;
-  margin-right: 7px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  font-size: 16px;
-}
-
-.menu-language-switch-buttons__en {
-  margin-right: 7px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  font-size: 16px;
-}
-
-.menu-language-switch-buttons__ch {
-  margin-right: 7px;
-  line-height: 24px;
-  letter-spacing: -0.2px;
-  font-size: 16px;
 }
 
 button:hover {

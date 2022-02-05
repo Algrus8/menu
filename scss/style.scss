@@ -31,14 +31,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-:focus,
-:active {
-  outline: none;
-}
-a:focus,
-a:active {
-  outline: none;
-}
+
 button {
   cursor: pointer;
 }
@@ -83,6 +76,8 @@ body {
 }
 
 .menu-wrapper {
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02),
+    16px 0px 52px rgba(14, 24, 80, 0.2);
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -121,6 +116,7 @@ body {
   margin-bottom: 32px;
   line-height: 24px;
   letter-spacing: -0.2px;
+  width: max-content;
 }
 
 .menu-navigation {
@@ -152,6 +148,10 @@ body {
   color: $menu-active-text-color;
 }
 
+.menu-navigation-element:first-child:hover > a {
+  color: $menu-main-text-color;
+}
+
 .menu-footer {
   display: flex;
   flex-direction: column;
@@ -163,6 +163,7 @@ body {
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
+    width: max-content;
   }
 
   &__phone-number {
@@ -191,26 +192,12 @@ body {
   }
 }
 .menu-language-switch-buttons {
-  &__ru {
+  margin-right: 7px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  font-size: 16px;
+  &:first-child {
     color: $menu-active-text-color;
-    margin-right: 7px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    font-size: 16px;
-  }
-
-  &__en {
-    margin-right: 7px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    font-size: 16px;
-  }
-
-  &__ch {
-    margin-right: 7px;
-    line-height: 24px;
-    letter-spacing: -0.2px;
-    font-size: 16px;
   }
 }
 
