@@ -113,16 +113,24 @@ body {
 
 .menu-navigation-element {
   margin-left: 24px;
-  margin-bottom: 32px;
+  margin-bottom: 10px;
   line-height: 24px;
   letter-spacing: -0.2px;
   width: max-content;
+  flex-grow: 1;
+}
+
+.menu-footer-down {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
 }
 
 .menu-navigation {
   display: flex;
   flex-direction: column;
   flex: 1 1 auto;
+  max-height: 452px;
   &__element1 {
     margin-left: 20px;
     margin-top: 4px;
